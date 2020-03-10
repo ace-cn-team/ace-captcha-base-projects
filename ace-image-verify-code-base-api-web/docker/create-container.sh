@@ -1,0 +1,1 @@
+docker run --restart=always -p 20003:20003 -d  --name ace-image-verify-code-base-api-web ace-image-verify-code-base-api-web:latest
