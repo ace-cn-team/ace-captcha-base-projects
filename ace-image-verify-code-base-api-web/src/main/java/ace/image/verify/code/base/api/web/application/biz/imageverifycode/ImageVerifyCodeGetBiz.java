@@ -75,7 +75,6 @@ public class ImageVerifyCodeGetBiz {
         //设置响应头通知浏览器以图片的形式打开
         response.setContentType("image/jpeg");
         //设置响应头控制浏览器不要缓存
-        response.setDateHeader("expries", -1);
         response.setHeader("Cache-Control", "no-cache");
         response.setHeader("Pragma", "no-cache");
         try {

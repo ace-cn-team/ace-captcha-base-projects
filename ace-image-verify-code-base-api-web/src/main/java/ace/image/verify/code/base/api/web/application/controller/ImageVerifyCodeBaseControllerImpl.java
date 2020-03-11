@@ -7,6 +7,8 @@ import ace.image.verify.code.base.api.web.application.biz.imageverifycode.ImageV
 import ace.image.verify.code.base.api.web.application.biz.imageverifycode.ImageVerifyCodeGetBiz;
 import ace.image.verify.code.define.base.model.request.CheckRequest;
 import ace.image.verify.code.define.base.model.request.GetImageVerifyCodeRequest;
+
+import feign.Response;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -30,8 +32,9 @@ public class ImageVerifyCodeBaseControllerImpl implements ImageVerifyCodeBaseCon
     private ImageVerifyCodeCheckBiz imageVerifyCodeCheckBiz;
 
     @Override
-    public void get(@Valid GetImageVerifyCodeRequest request) {
+    public Response get(@Valid GetImageVerifyCodeRequest request) {
         getBiz.execute(request);
+        return null;
     }
 
     @Override

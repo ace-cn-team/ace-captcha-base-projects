@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
  * @description
  */
 @ConditionalOnProperty(
-        name = ImageVerifyCodeConstants.CONFIG_KEY_BASE_API_CLIENT_ENABLE,
+        name = ImageVerifyCodeConstants.BASE_CONFIG_KEY_API_CLIENT_ENABLE,
         havingValue = "true",
         matchIfMissing = true
 )

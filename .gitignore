@@ -3,3 +3,9 @@
 /ace-image-verify-code-base-api-web/*.iml
 /ace-image-verify-code-define/*.iml
 /*.iml
+/ace-image-verify-code-base-api-web/target
+/ace-image-verify-code-base-api-client-autoconfigure/target
+/ace-image-verify-code-base-api/target
+/ace-image-verify-code-define/target
+/.idea/
+/logs/

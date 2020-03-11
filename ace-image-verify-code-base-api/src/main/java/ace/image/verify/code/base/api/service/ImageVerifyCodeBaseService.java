@@ -4,6 +4,7 @@ import ace.fw.model.response.GenericResponseExt;
 import ace.image.verify.code.define.base.constant.ImageVerifyCodeConstants;
 import ace.image.verify.code.define.base.model.request.CheckRequest;
 import ace.image.verify.code.define.base.model.request.GetImageVerifyCodeRequest;
+import feign.Response;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.validation.annotation.Validated;
@@ -29,8 +30,8 @@ public interface ImageVerifyCodeBaseService {
     String MODULE_RESTFUL_NAME = "image-verify-code-base";
 
     @ApiOperation(value = "获取图形验证码图片")
-    @RequestMapping(path = "/get", method = RequestMethod.GET)
-    void get(@Valid GetImageVerifyCodeRequest request);
+    @RequestMapping(path = "/get", method = RequestMethod.POST)
+    Response get(@Valid @RequestBody GetImageVerifyCodeRequest request);
 
     @ApiOperation(value = "验证图形验证码")
     @RequestMapping(path = "/check", method = RequestMethod.POST)

@@ -14,9 +14,24 @@ public interface ImageVerifyCodeConstants {
     /**
      * 是否启用base api layer openfeign微服务自动配置
      */
-    String CONFIG_KEY_BASE_API_CLIENT_ENABLE = "ace.ms.service.api.ace-image-verify-code-base-api.enable";
+    String BASE_CONFIG_KEY_API_CLIENT_ENABLE = "ace.ms.service.api.ace-image-verify-code-base-api.enable";
     /**
      * base api layer 包路径
      */
     String BASE_FEIGN_CLIENT_SERVICE_PACKAGE = "ace.image.verify.code.base.api.service";
+
+
+
+    /**
+     * logic api layer openfeign微服务配置名称
+     */
+    String LOGIC_FEIGN_CLIENT_NAME = "${ace.ms.service.api.ace-image-verify-code-logic-api.name:ace-image-verify-code-logic-api-web}";
+    /**
+     * 是否启用 logic api layer openfeign微服务自动配置
+     */
+    String LOGIC_CONFIG_KEY_API_CLIENT_ENABLE = "ace.ms.service.api.ace-image-verify-code-logic-api.enable";
+    /**
+     * logic api layer 包路径
+     */
+    String LOGIC_FEIGN_CLIENT_SERVICE_PACKAGE = "ace.image.verify.code.logic.api.service";
 }
