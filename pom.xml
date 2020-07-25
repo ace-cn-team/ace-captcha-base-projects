@@ -5,18 +5,141 @@
     <parent>
         <artifactId>ace-projects</artifactId>
         <groupId>org.ace</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.0.3</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
-    <artifactId>ace-image-verify-code-base-projects</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <artifactId>ace-captcha-base-projects</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>ace-image-verify-code-base-api</module>
-        <module>ace-image-verify-code-base-api-client-autoconfigure</module>
-        <module>ace-image-verify-code-base-api-web</module>
-        <module>ace-image-verify-code-define</module>
+        <module>ace-captcha-base-api</module>
+        <module>ace-captcha-base-api-client-autoconfigure</module>
+        <module>ace-captcha-base-api-web</module>
+        <module>ace-captcha-base-define</module>
+        <module>ace-captcha-base-api-client-junit</module>
     </modules>
+    <properties>
+        <ace.fw.version>1.0.0.6</ace.fw.version>
+        <ace.common.base.version>1.0.0.2</ace.common.base.version>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.ace</groupId>
+                <artifactId>ace-captcha-base-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ace</groupId>
+                <artifactId>ace-captcha-base-define</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ace</groupId>
+                <artifactId>ace-captcha-base-api-client-autoconfigure</artifactId>
+                <version>${project.version}</version>
+            </dependency>
 
+            <dependency>
+                <groupId>org.ace</groupId>
+                <artifactId>ace-common-base-define</artifactId>
+                <version>${ace.common.base.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ace</groupId>
+                <artifactId>ace-fw-actuator-autoconfigure</artifactId>
+                <version>${ace.fw.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ace</groupId>
+                <artifactId>ace-fw-data</artifactId>
+                <version>${ace.fw.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ace</groupId>
+                <artifactId>ace-fw-redisson-autoconfigure</artifactId>
+                <version>${ace.fw.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ace</groupId>
+                <artifactId>ace-fw-ms-application-autoconfigure</artifactId>
+                <version>${ace.fw.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ace</groupId>
+                <artifactId>ace-fw-ms-discovery-server-autoconfigure</artifactId>
+                <version>${ace.fw.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ace</groupId>
+                <artifactId>ace-fw-log4j2-autoconfigure</artifactId>
+                <version>${ace.fw.version}</version>
+            </dependency>
 
+            <dependency>
+                <groupId>org.ace</groupId>
+                <artifactId>ace-fw</artifactId>
+                <version>${ace.fw.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ace</groupId>
+                <artifactId>ace-fw-json</artifactId>
+                <version>${ace.fw.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ace</groupId>
+                <artifactId>ace-fw-json-fastjson</artifactId>
+                <version>${ace.fw.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ace</groupId>
+                <artifactId>ace-fw-redisson-autoconfigure</artifactId>
+                <version>${ace.fw.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ace</groupId>
+                <artifactId>ace-fw-ms-application</artifactId>
+                <version>${ace.fw.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ace</groupId>
+                <artifactId>ace-fw-ms-application-autoconfigure</artifactId>
+                <version>${ace.fw.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ace</groupId>
+                <artifactId>ace-fw-ms-discovery-server-autoconfigure</artifactId>
+                <version>${ace.fw.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <build>
+        <plugins>
+            <!-- 统一更改版本  说明：http://www.lavecoral.me/archives/213.html -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>2.3</version>
+                <configuration>
+                    <generateBackupPoms>false</generateBackupPoms>
+                </configuration>
+            </plugin>
+            <!-- 要将源码放上去，需要加入这个插件 -->
+            <plugin>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <attach>true</attach>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>

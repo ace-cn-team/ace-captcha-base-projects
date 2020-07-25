@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+ace.captcha.base.api.client.autoconfigure.EnableFeignClientAutoConfigure
