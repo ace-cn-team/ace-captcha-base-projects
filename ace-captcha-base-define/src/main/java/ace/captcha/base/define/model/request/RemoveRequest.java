@@ -1,6 +1,6 @@
 package ace.captcha.base.define.model.request;
 
-import ace.common.base.define.model.request.CommonAppRequest;
+import ace.common.base.define.model.request.CommonAppBizRequest;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,5 +15,5 @@ import lombok.experimental.Accessors;
  */
 @Data
 @Accessors(chain = true)
-public class RemoveRequest extends CommonAppRequest {
+public class RemoveRequest extends CommonAppBizRequest {
 }

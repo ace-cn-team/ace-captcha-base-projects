@@ -1,6 +1,6 @@
 package ace.captcha.base.define.model.request;
 
-import ace.common.base.define.model.request.CommonAppRequest;
+import ace.common.base.define.model.request.CommonAppBizRequest;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.experimental.Accessors;
@@ -16,7 +16,7 @@ import javax.validation.constraints.NotBlank;
  */
 @Data
 @Accessors(chain = true)
-public class CheckRequest extends CommonAppRequest {
+public class CheckRequest extends CommonAppBizRequest {
 
     @ApiModelProperty(value = "图形验证码", required = true)
     @NotBlank(message = "请输入验证码")

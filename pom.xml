@@ -8,7 +8,7 @@
         <version>1.0.0.3</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <version>1.0.0.1</version>
+    <version>1.0.0.2</version>
     <artifactId>ace-captcha-base-projects</artifactId>
     <packaging>pom</packaging>
     <modules>
@@ -20,7 +20,7 @@
     </modules>
     <properties>
         <ace.fw.version>1.0.0.6</ace.fw.version>
-        <ace.common.base.version>1.0.0.2</ace.common.base.version>
+        <ace.common.base.version>1.0.0.3</ace.common.base.version>
     </properties>
     <dependencyManagement>
         <dependencies>

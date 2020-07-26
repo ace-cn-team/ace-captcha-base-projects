@@ -6,18 +6,16 @@
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_11">
-    <output url="file://$MODULE_DIR$/../ace-captcha-base-api/target/classes" />
-    <output-test url="file://$MODULE_DIR$/../ace-captcha-base-api/target/test-classes" />
-    <content url="file://$MODULE_DIR$/../ace-captcha-base-api">
-      <sourceFolder url="file://$MODULE_DIR$/../ace-captcha-base-api/src/main/java" isTestSource="false" />
-      <excludeFolder url="file://$MODULE_DIR$/../ace-captcha-base-api/target" />
+    <output url="file://$MODULE_DIR$/target/classes" />
+    <output-test url="file://$MODULE_DIR$/target/test-classes" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
-      <excludeFolder url="file://$MODULE_DIR$/../ace-kaptcha-base-api/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="ace-captcha-base-define" />
-    <orderEntry type="library" name="Maven: org.ace:ace-common-base-define:1.0.0.2" level="project" />
+    <orderEntry type="library" name="Maven: org.ace:ace-common-base-define:1.0.0.3" level="project" />
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.16.22" level="project" />
     <orderEntry type="library" name="Maven: io.swagger:swagger-annotations:1.5.14" level="project" />
     <orderEntry type="library" name="Maven: org.hibernate.validator:hibernate-validator:6.0.18.Final" level="project" />

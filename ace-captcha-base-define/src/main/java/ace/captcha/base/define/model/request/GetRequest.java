@@ -1,7 +1,7 @@
 package ace.captcha.base.define.model.request;
 
 import ace.captcha.base.define.enums.CaptchaTypeEnum;
-import ace.common.base.define.model.request.CommonAppRequest;
+import ace.common.base.define.model.request.CommonAppBizRequest;
 import ace.fw.util.AceEnumUtils;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -18,7 +18,7 @@ import lombok.experimental.Accessors;
  */
 @Data
 @Accessors(chain = true)
-public class GetRequest extends CommonAppRequest {
+public class GetRequest extends CommonAppBizRequest {
     private final static Integer DEFAULT_IMAGE_WIDTH = 100;
     private final static Integer DEFAULT_IMAGE_HEIGHT = 50;
     private final static Integer DEFAULT_COUNT = 4;
