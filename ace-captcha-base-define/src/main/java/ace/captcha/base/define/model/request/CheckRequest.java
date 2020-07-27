@@ -1,12 +1,16 @@
 package ace.captcha.base.define.model.request;
 
-import ace.common.base.define.model.request.CommonAppBizRequest;
+import ace.captcha.base.define.constraint.CaptchaVerifyCodeIdConstraint;
+import ace.captcha.base.define.constraint.CaptchaVerifyCodeConstraint;
+import ace.captcha.base.define.model.bo.CaptchaVerifyCodeId;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
-import org.hibernate.validator.constraints.Length;
 
-import javax.validation.constraints.NotBlank;
+import javax.validation.Valid;
 
 /**
  * @author Caspar
@@ -16,10 +20,15 @@ import javax.validation.constraints.NotBlank;
  */
 @Data
 @Accessors(chain = true)
-public class CheckRequest extends CommonAppBizRequest {
-
-    @ApiModelProperty(value = "图形验证码", required = true)
-    @NotBlank(message = "请输入验证码")
-    @Length(min = 1, max = 36, message = "请输入正确的验证码")
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class CheckRequest {
+    @Valid
+    @CaptchaVerifyCodeIdConstraint
+    @ApiModelProperty(value = CaptchaVerifyCodeIdConstraint.FIELD_NAME, required = true)
+    private CaptchaVerifyCodeId verifyCodeId;
+    @CaptchaVerifyCodeConstraint
+    @ApiModelProperty(value = CaptchaVerifyCodeConstraint.FIELD_NAME, required = true)
     private String verifyCode;
 }

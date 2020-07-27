@@ -12,8 +12,6 @@ import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.Objects;
-
 /**
  * @author Caspar
  * @contract 279397942@qq.com
@@ -34,7 +32,7 @@ public class CaptchaCheckBiz {
         if (this.isSystemVerifyCodePass(request)) {
             return;
         }
-        String cacheKey = CaptchaUtils.getCacheKey(request.getAppBiz().getAppId(), request.getAppBiz().getBizId(), request.getAppBiz().getBizType());
+        String cacheKey = CaptchaUtils.getCacheKey(request.getVerifyCodeId().getAppId(), request.getVerifyCodeId().getBizId(), request.getVerifyCodeId().getBizType());
         RBucket<String> cacheRBucket = redissonClient.getBucket(cacheKey);
         String cacheValue = cacheRBucket.get();
         if (StringUtils.isBlank(cacheValue)) {

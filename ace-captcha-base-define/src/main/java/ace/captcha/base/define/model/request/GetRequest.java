@@ -1,7 +1,9 @@
 package ace.captcha.base.define.model.request;
 
+import ace.captcha.base.define.constraint.CaptchaVerifyCodeIdConstraint;
 import ace.captcha.base.define.enums.CaptchaTypeEnum;
-import ace.common.base.define.model.request.CommonAppBizRequest;
+import ace.captcha.base.define.model.bo.CaptchaVerifyCodeId;
+
 import ace.fw.util.AceEnumUtils;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -9,6 +11,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
+
+import javax.validation.Valid;
 
 /**
  * @author Caspar
@@ -18,7 +22,10 @@ import lombok.experimental.Accessors;
  */
 @Data
 @Accessors(chain = true)
-public class GetRequest extends CommonAppBizRequest {
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class GetRequest {
     private final static Integer DEFAULT_IMAGE_WIDTH = 100;
     private final static Integer DEFAULT_IMAGE_HEIGHT = 50;
     private final static Integer DEFAULT_COUNT = 4;
@@ -36,6 +43,10 @@ public class GetRequest extends CommonAppBizRequest {
     private Integer fontSize = DEFAULT_FONT_SIZE;
     @ApiModelProperty(value = "图片验证码类型，0-纯数字，1-纯字母，2-数字与字母", required = true)
     private Integer type = DEFAULT_TYPE;
+    @Valid
+    @CaptchaVerifyCodeIdConstraint
+    @ApiModelProperty(value = CaptchaVerifyCodeIdConstraint.FIELD_NAME, required = true)
+    private CaptchaVerifyCodeId verifyCodeId;
 
     @ApiModelProperty(hidden = true)
     public CaptchaTypeEnum getTypeEnum() {

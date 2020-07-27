@@ -22,7 +22,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="ace-captcha-base-api" />
     <orderEntry type="module" module-name="ace-captcha-base-define" />
-    <orderEntry type="library" name="Maven: org.ace:ace-common-base-define:1.0.0.3" level="project" />
+    <orderEntry type="library" name="Maven: org.ace:ace-common-base-define:1.0.0.6" level="project" />
     <orderEntry type="library" name="Maven: io.swagger:swagger-annotations:1.5.14" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:5.2.6.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:5.2.6.RELEASE" level="project" />

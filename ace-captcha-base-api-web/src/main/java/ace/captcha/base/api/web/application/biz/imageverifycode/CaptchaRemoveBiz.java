@@ -36,7 +36,7 @@ public class CaptchaRemoveBiz {
     private RedissonClient redissonClient;
 
     public void remove(RemoveRequest request) {
-        String cacheKey = CaptchaUtils.getCacheKey(request.getAppBiz().getAppId(), request.getAppBiz().getBizId(), request.getAppBiz().getBizType());
+        String cacheKey = CaptchaUtils.getCacheKey(request.getVerifyCodeId().getAppId(), request.getVerifyCodeId().getBizId(), request.getVerifyCodeId().getBizType());
         RBucket<String> cacheRBucket = redissonClient.getBucket(cacheKey);
         cacheRBucket.deleteAsync();
     }
