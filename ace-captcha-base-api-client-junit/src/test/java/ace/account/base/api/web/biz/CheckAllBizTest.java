@@ -70,7 +70,7 @@ public class CheckAllBizTest {
     private void testGet() {
         GetRequest getRequest = new GetRequest();
         getRequest.setVerifyCodeId(CaptchaVerifyCodeId.builder()
-               // .appId(Generators.timeBasedGenerator().generate().toString())
+                .appId(Generators.timeBasedGenerator().generate().toString())
                 .bizType(Generators.timeBasedGenerator().generate().toString())
                 .bizId(Generators.timeBasedGenerator().generate().toString())
                 .build());
