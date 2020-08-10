@@ -15,3 +15,7 @@
 /ace-captcha-base-api-client-junit/ace-captcha-base-api-client-junit.iml
 /ace-captcha-base-api-web/target/classes/
 /ace-captcha-base-define/target/classes/
+/ace-captcha-base-api/target/
+/ace-captcha-base-api-client-autoconfigure/target/
+/ace-captcha-base-api-web/target/
+/ace-captcha-base-define/target/
